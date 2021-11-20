@@ -46,7 +46,24 @@
 
                                     <?php
                                         
-                                        $topics = ["Reports", "Analytics", "Exports", "Storage"];
+                                        $topics = [
+                                            [ 
+                                                "tags"=> "reports file", 
+                                                "items"=> "Reports"
+                                            ],
+                                            [ 
+                                                "tags"=> "analytics graphs", 
+                                                "items"=> "Analytics"
+                                            ],
+                                            [ 
+                                                "tags"=> "export download", 
+                                                "items"=> "Exports"
+                                            ],
+                                            [ 
+                                                "tags"=> "storage", 
+                                                "items"=> "Storage"
+                                            ]
+                                        ];
 
                                     ?>
 
@@ -54,11 +71,12 @@
                                     <ul id="js-list-msg" class="list-group px-2 pb-2 js-list-filter">
                                         <?php  foreach ($topics as $topic): ?>    
                                         <li class="list-group-item">                                        
-                                            <span data-filter-tags="reports file"><? echo $topic; ?></span>
+                                            <span data-filter-tags="<? echo $topic["tags"]?> ">
+                                            <? echo $topic["items"] ; ?></span>
                                         </li>
                                         <?php endforeach; ?>    
                                     </ul>
-
+                                    
                                     <div class="filter-message js-filter-message mt-0 fs-sm"></div>
                                 </div>
                             </div>
