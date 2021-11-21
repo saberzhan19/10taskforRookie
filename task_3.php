@@ -38,29 +38,34 @@
                                     [
                                         "page"=> "Главная",
                                         "href"=> "/",
-                                        "active"=> "able"
+                                        "active"=> "act"
 
                                     ],
                                     [
                                         "page"=> "PHP",
                                         "href"=> "/",
-                                        "active"=> "able"
+                                        "active"=> "act"
 
                                     ],
                                     [
                                         "page"=> "Функции",
-                                        "href"=> "",
-                                        "active"=> "disabled",
+                                        "href"=> "#",
+                                        "active"=> "not act",
                                     ]                                    
 
                                 ];
                         ?>
                             <ol class="breadcrumb page-breadcrumb">
                                 <?php foreach ($items as $item):?>
+                                    
+                                    <? if($item["active"] == "act"):?>
+                                    
+                                    <li class="breadcrumb-item">                                    
+                                    <a href="<? echo $item["href"];?>"><? echo $item["page"];?></a></li>
+                                    <? else: ?>
+                                    <li class="breadcrumb-item active"><? echo $item["page"];?></li>
 
-                                <li class="breadcrumb-item <? echo $item["active"];?>">
-                                <a href="<? echo $item["href"];?>"><? echo $item["page"];?></a></li>
-
+                                    <? endif;?>
                                 
                                 <? endforeach;?>
                             </ol>
