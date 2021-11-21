@@ -32,10 +32,37 @@
                     </div>
                     <div class="panel-container show">
                         <div class="panel-content">
+
+                        <?php 
+                                $items = [
+                                    [
+                                        "page"=> "Главная",
+                                        "href"=> "/",
+                                        "active"=> "able"
+
+                                    ],
+                                    [
+                                        "page"=> "PHP",
+                                        "href"=> "/",
+                                        "active"=> "able"
+
+                                    ],
+                                    [
+                                        "page"=> "Функции",
+                                        "href"=> "",
+                                        "active"=> "disabled",
+                                    ]                                    
+
+                                ];
+                        ?>
                             <ol class="breadcrumb page-breadcrumb">
-                                <li class="breadcrumb-item"><a href="#">Главная</a></li>
-                                <li class="breadcrumb-item"><a href="#">PHP</a></li>
-                                <li class="breadcrumb-item active">Функции</li>
+                                <?php foreach ($items as $item):?>
+
+                                <li class="breadcrumb-item <? echo $item["active"];?>">
+                                <a href="<? echo $item["href"];?>"><? echo $item["page"];?></a></li>
+
+                                
+                                <? endforeach;?>
                             </ol>
                         </div>
                     </div>
