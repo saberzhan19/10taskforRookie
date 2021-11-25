@@ -35,7 +35,6 @@
                             <button class="btn btn-panel waves-effect waves-themed" data-action="panel-fullscreen" data-toggle="tooltip" data-offset="0,10" data-original-title="Fullscreen"></button>
                         </div>
                     </div>
-                            
                             <?php 
 
                                 $users = [
@@ -88,10 +87,12 @@
                                 ];
 
                             ?>
-
                     <div class="panel-container show">
                         <div class="panel-content">
-                           <div class="d-flex flex-wrap demo demo-h-spacing mt-3 mb-3">                            
+                           <div class="d-flex flex-wrap demo demo-h-spacing mt-3 mb-3">
+
+
+                            
 
                             <?php foreach ($users as $user):?>                                
                                     <div class=" <? echo $user["active"] == 'disabled' ? 'disabled' : ''?> rounded-pill bg-white shadow-sm p-2 border-faded mr-3 d-flex flex-row align-items-center justify-content-center flex-shrink-0">
