@@ -16,6 +16,11 @@
         <link rel="stylesheet" media="screen, print" href="css/fa-solid.css">
         <link rel="stylesheet" media="screen, print" href="css/fa-brands.css">
         <link rel="stylesheet" media="screen, print" href="css/fa-regular.css">
+        <style>
+            .disabled {
+                opacity: .4;
+            }
+        </style>
     </head>
     <body class="mod-bg-1 mod-nav-link ">
         <main id="js-page-content" role="main" class="page-content">
@@ -87,14 +92,11 @@
 
                             ?>
 
-                            <style>
-                                .disabled {
-                                    opacity: .1;                                    
-                                }
-                            </style>
+                            
 
-                            <?php foreach ($users as $user):?>                                
-                                    <div class="<? echo $user["active"] == "disabled" ? 'disabled' : '';?> rounded-pill bg-white shadow-sm p-2 border-faded mr-3 d-flex flex-row align-items-center justify-content-center flex-shrink-0">
+                            <?php foreach ($users as $user):?>   
+                                                          
+                                    <div class="<? echo $user["active"] == "enabled" ? "";?>rounded-pill bg-white shadow-sm p-2 border-faded mr-3 d-flex flex-row align-items-center justify-content-center flex-shrink-0">
                                         <img src="<? echo $user["img"]; ?> " alt="<? echo $user["alt"]; ?>" class="img-thumbnail img-responsive rounded-circle" style="width:5rem; height: 5rem;">
                                         <div class="ml-2 mr-3" >
                                             <h5 class="m-0" >                                                

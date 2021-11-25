@@ -89,7 +89,7 @@
 
                             <style>
                                 .disabled {
-                                    opacity: .1;                                    
+                                    opacity: .4;
                                 }
                             </style>
 

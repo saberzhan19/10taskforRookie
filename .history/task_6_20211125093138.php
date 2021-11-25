@@ -89,7 +89,8 @@
 
                             <style>
                                 .disabled {
-                                    opacity: .1;                                    
+                                    opacity: .5;
+                                    background-color: red;
                                 }
                             </style>
 

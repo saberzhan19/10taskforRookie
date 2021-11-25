@@ -16,6 +16,11 @@
         <link rel="stylesheet" media="screen, print" href="css/fa-solid.css">
         <link rel="stylesheet" media="screen, print" href="css/fa-brands.css">
         <link rel="stylesheet" media="screen, print" href="css/fa-regular.css">
+        <style>
+            .banned {
+                opacity: .4;                
+            }
+        </style>
     </head>
     <body class="mod-bg-1 mod-nav-link ">
         <main id="js-page-content" role="main" class="page-content">
@@ -30,10 +35,6 @@
                             <button class="btn btn-panel waves-effect waves-themed" data-action="panel-fullscreen" data-toggle="tooltip" data-offset="0,10" data-original-title="Fullscreen"></button>
                         </div>
                     </div>
-                    <div class="panel-container show">
-                        <div class="panel-content">
-                           <div class="d-flex flex-wrap demo demo-h-spacing mt-3 mb-3">
-
                             <?php 
 
                                 $users = [
@@ -69,7 +70,7 @@
                                         "twitter"=> "@lodev09",
                                         "wrap"=> "https://wrapbootstrap.com/user/lodev09",
                                         "title"=> "Contact Jovanni",
-                                        "active"=> "disabled"
+                                        "active"=> "disabl"
                                     ],
                                     [
                                         "img"=> "img/demo/authors/roberto.png",
@@ -80,21 +81,22 @@
                                         "twitter"=> "@sildur",
                                         "wrap"=> "https://wrapbootstrap.com/user/sildur",
                                         "title"=> "Contact Roberto",
-                                        "active"=> "disabled"
+                                        "active"=> "disabl"
                                     ]
 
                                 ];
 
                             ?>
+                    <div class="panel-container show">
+                        <div class="panel-content">
+                           <div class="d-flex flex-wrap demo demo-h-spacing mt-3 mb-3">
 
-                            <style>
-                                .disabled {
-                                    opacity: .1;                                    
-                                }
-                            </style>
 
-                            <?php foreach ($users as $user):?>                                
-                                    <div class="<? echo $user["active"] == "disabled" ? 'disabled' : '';?> rounded-pill bg-white shadow-sm p-2 border-faded mr-3 d-flex flex-row align-items-center justify-content-center flex-shrink-0">
+                            
+
+                            <?php foreach ($users as $user):?>   
+                                                          
+                                    <div class="<? echo $user["active"] == 'disabl' ? 'banned': '' ?>rounded-pill bg-white shadow-sm p-2 border-faded mr-3 d-flex flex-row align-items-center justify-content-center flex-shrink-0">
                                         <img src="<? echo $user["img"]; ?> " alt="<? echo $user["alt"]; ?>" class="img-thumbnail img-responsive rounded-circle" style="width:5rem; height: 5rem;">
                                         <div class="ml-2 mr-3" >
                                             <h5 class="m-0" >                                                

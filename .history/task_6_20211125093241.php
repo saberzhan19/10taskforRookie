@@ -94,7 +94,7 @@
                             </style>
 
                             <?php foreach ($users as $user):?>                                
-                                    <div class="<? echo $user["active"] == "disabled" ? 'disabled' : '';?> rounded-pill bg-white shadow-sm p-2 border-faded mr-3 d-flex flex-row align-items-center justify-content-center flex-shrink-0">
+                                    <div class="<? echo $user["active"] == "enable" ? 'disabled' : '';?> rounded-pill bg-white shadow-sm p-2 border-faded mr-3 d-flex flex-row align-items-center justify-content-center flex-shrink-0">
                                         <img src="<? echo $user["img"]; ?> " alt="<? echo $user["alt"]; ?>" class="img-thumbnail img-responsive rounded-circle" style="width:5rem; height: 5rem;">
                                         <div class="ml-2 mr-3" >
                                             <h5 class="m-0" >                                                
