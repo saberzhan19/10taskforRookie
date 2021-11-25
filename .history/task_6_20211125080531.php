@@ -93,7 +93,8 @@
                                 }
                             </style>
 
-                            <?php foreach ($users as $user):?>                                
+                            <?php foreach ($users as $user):?>
+                                <? echo $user["active"] === false ? 'not_active' : '';?>
                                     <div class="rounded-pill bg-white shadow-sm p-2 border-faded mr-3 d-flex flex-row align-items-center justify-content-center flex-shrink-0">
                                         <img src="<? echo $user["img"]; ?> " alt="<? echo $user["alt"]; ?>" class="img-thumbnail img-responsive rounded-circle" style="width:5rem; height: 5rem;">
                                         <div class="ml-2 mr-3" >

@@ -89,7 +89,7 @@
 
                             <style>
                                 .not_active {
-                                    opacity: .4;
+                                    opacity: 0.4;
                                 }
                             </style>
 

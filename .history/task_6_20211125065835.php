@@ -47,7 +47,7 @@
                                         "twitter"=> "@myplaneticket",
                                         "wrap"=> "https://wrapbootstrap.com/user/myorange",
                                         "title"=> "Contact Sunny",
-                                        "active"=> true
+                                        "active"=> "able"
                                     ],
                                     [
                                         "img"=> "img/demo/authors/josh.png",
@@ -58,7 +58,7 @@
                                         "twitter"=> "@atlantez",
                                         "wrap"=> "https://wrapbootstrap.com/user/Walapa",
                                         "title"=> "Contact Jos",
-                                        "active"=> true
+                                        "active"=> "able"
                                     ],
                                     [
                                         "img"=> "img/demo/authors/jovanni.png",
@@ -69,7 +69,7 @@
                                         "twitter"=> "@lodev09",
                                         "wrap"=> "https://wrapbootstrap.com/user/lodev09",
                                         "title"=> "Contact Jovanni",
-                                        "active"=> false
+                                        "active"=> "disabled"
                                     ],
                                     [
                                         "img"=> "img/demo/authors/roberto.png",
@@ -80,26 +80,21 @@
                                         "twitter"=> "@sildur",
                                         "wrap"=> "https://wrapbootstrap.com/user/sildur",
                                         "title"=> "Contact Roberto",
-                                        "active"=> false
+                                        "active"=> "disabled"
                                     ]
 
                                 ];
 
                             ?>
 
-                            <style>
-                                .not_active {
-                                    opacity: .4;
-                                }
-                            </style>
-
-                            <?php foreach ($users as $user):?>                                
+                            <?php foreach ($users as $user):?>
+                                
                                     <div class="rounded-pill bg-white shadow-sm p-2 border-faded mr-3 d-flex flex-row align-items-center justify-content-center flex-shrink-0">
                                         <img src="<? echo $user["img"]; ?> " alt="<? echo $user["alt"]; ?>" class="img-thumbnail img-responsive rounded-circle" style="width:5rem; height: 5rem;">
                                         <div class="ml-2 mr-3" >
                                             <h5 class="m-0" >                                                
                                             <? echo $user["authors"]; ?>
-                                                <small class="m-0 fw-300">
+                                                <small class="m-0 fw-300" >
                                                 <? echo $user["post"]; ?>
                                                 </small>
                                             </h5>
@@ -107,6 +102,7 @@
                                             <a href="<? echo $user["wrap"]; ?>" class="text-info fs-sm" target="_blank" title="<? echo $user["title"]; ?>"><i class="fal fa-envelope"></i></a>
                                         </div>
                                     </div>
+                                
                             <?php endforeach;?>
                             
                         </div>
