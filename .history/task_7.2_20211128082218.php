@@ -38,12 +38,7 @@
                             
                             <?php 
 
-                                
-                                //без id
-                                // echo'<pre>';
-                                // print_r($users);die;
-                                // echo'</pre>';
-
+                               
                                 $pdo = new PDO("mysql:host=localhost;dbname=10taskrookie", "root", "");
 
                                 $sql = "SELECT * FROM users";
@@ -51,11 +46,6 @@
                                 $statement = $pdo-> prepare($sql);
                                 $statement->execute();
                                 $users = $statement->fetchAll(PDO::FETCH_ASSOC);
-                                // соединение с бд, будет видно id
-                                // echo'<pre>';
-                                // print_r($statement->fetchAll(PDO::FETCH_ASSOC));die;
-                                // echo'</pre>';
-                                
                             ?>
 
                     <div class="panel-container show">
@@ -73,8 +63,7 @@
                                                 </small>
                                             </h5>
                                             <a href="<? echo $user["href"]; ?>" class="text-info fs-sm" target="_blank"><? echo $user["twitter"]; ?></a> -
-                                            <a href="<? echo $user["wrap"]; ?>" class="text-info fs-sm" target="_blank" 
-                                            title="<? echo $user["title"];?>"> <? echo $user["email_link"]; ?></a>
+                                            <a href="<? echo $user["wrap"]; ?>" class="text-info fs-sm" target="_blank" title="<? echo $user["title"]; ?>">lope"></i></a>
                                         </div>
                                     </div>
                             <?php endforeach;?>
