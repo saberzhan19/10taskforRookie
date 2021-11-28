@@ -49,7 +49,7 @@
                                 //         "twitter"=> "@myplaneticket",
                                 //         "wrap"=> "https://wrapbootstrap.com/user/myorange",
                                 //         "title"=> "Contact Sunny",
-                                        // "email_link"=> '<i class="fal fa-envelope"></i>'
+                                            // "email_link"=> '<i class="fal fa-envelope"></i>'
                                 //         "active"=> "enable"
                                 //     ],
                                 //     [
@@ -60,7 +60,6 @@
                                 //         "href"=> "https://twitter.com/@atlantez",
                                 //         "twitter"=> "@atlantez",
                                 //         "wrap"=> "https://wrapbootstrap.com/user/Walapa",
-                                        // "email_link"=> '<i class="fal fa-envelope"></i>'
                                 //         "title"=> "Contact Jos",
                                 //         "active"=> "enable"
                                 //     ],
@@ -72,7 +71,6 @@
                                 //         "href"=> "https://twitter.com/@lodev09",
                                 //         "twitter"=> "@lodev09",
                                 //         "wrap"=> "https://wrapbootstrap.com/user/lodev09",
-                                        // "email_link"=> '<i class="fal fa-envelope"></i>'
                                 //         "title"=> "Contact Jovanni",
                                 //         "active"=> "disabled"
                                 //     ],
@@ -84,7 +82,6 @@
                                 //         "href"=> "https://twitter.com/@sildur",
                                 //         "twitter"=> "@sildur",
                                 //         "wrap"=> "https://wrapbootstrap.com/user/sildur",
-                                        // "email_link"=> '<i class="fal fa-envelope"></i>'
                                 //         "title"=> "Contact Roberto",
                                 //         "active"=> "disabled"
                                 //     ]
@@ -125,7 +122,7 @@
                                                 </small>
                                             </h5>
                                             <a href="<? echo $user["href"]; ?>" class="text-info fs-sm" target="_blank"><? echo $user["twitter"]; ?></a> -
-                                            <a href="<? echo $user["wrap"]; ?>" class="text-info fs-sm" target="_blank" title="<? echo $user["title"]; ?>"><? echo $user["email_link"]; ?></a>
+                                            <a href="<? echo $user["wrap"]; ?>" class="text-info fs-sm" target="_blank" title="<? echo $user["title"]; ?>"><i class="fal fa-envelope"></i></a>
                                         </div>
                                     </div>
                             <?php endforeach;?>

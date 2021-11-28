@@ -124,7 +124,7 @@
                                                 <? echo $user["post"]; ?>
                                                 </small>
                                             </h5>
-                                            <a href="<? echo $user["href"]; ?>" class="text-info fs-sm" target="_blank"><? echo $user["twitter"]; ?></a> -
+                                            <a href="<? echo $user["href"]; ?>" class="text-info fs-sm" target="_blank">'<? echo $user["twitter"]; ?></a> -
                                             <a href="<? echo $user["wrap"]; ?>" class="text-info fs-sm" target="_blank" title="<? echo $user["title"]; ?>"><? echo $user["email_link"]; ?></a>
                                         </div>
                                     </div>

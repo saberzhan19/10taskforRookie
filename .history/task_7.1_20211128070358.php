@@ -38,64 +38,57 @@
                             
                             <?php 
 
-                                // $users = [
+                                $users = [
 
-                                //     [
-                                //         "img"=> "img/demo/authors/sunny.png",
-                                //         "alt"=> "Sunny A.",
-                                //         "authors"=> "Sunny A. (UI/UX Expert)",
-                                //         "post"=> "Lead Author",
-                                //         "href"=> "https://twitter.com/@myplaneticket",
-                                //         "twitter"=> "@myplaneticket",
-                                //         "wrap"=> "https://wrapbootstrap.com/user/myorange",
-                                //         "title"=> "Contact Sunny",
-                                        // "email_link"=> '<i class="fal fa-envelope"></i>'
-                                //         "active"=> "enable"
-                                //     ],
-                                //     [
-                                //         "img"=> "img/demo/authors/josh.png",
-                                //         "alt"=> "Jos K.",
-                                //         "authors"=> "Jos K. (ASP.NET Developer)",
-                                //         "post"=> "Partner &amp; Contributor",
-                                //         "href"=> "https://twitter.com/@atlantez",
-                                //         "twitter"=> "@atlantez",
-                                //         "wrap"=> "https://wrapbootstrap.com/user/Walapa",
-                                        // "email_link"=> '<i class="fal fa-envelope"></i>'
-                                //         "title"=> "Contact Jos",
-                                //         "active"=> "enable"
-                                //     ],
-                                //     [
-                                //         "img"=> "img/demo/authors/jovanni.png",
-                                //         "alt"=> "Jovanni Lo",
-                                //         "authors"=> "Jovanni L. (PHP Developer)",
-                                //         "post"=> "Partner &amp; Contributor",
-                                //         "href"=> "https://twitter.com/@lodev09",
-                                //         "twitter"=> "@lodev09",
-                                //         "wrap"=> "https://wrapbootstrap.com/user/lodev09",
-                                        // "email_link"=> '<i class="fal fa-envelope"></i>'
-                                //         "title"=> "Contact Jovanni",
-                                //         "active"=> "disabled"
-                                //     ],
-                                //     [
-                                //         "img"=> "img/demo/authors/roberto.png",
-                                //         "alt"=> "Roberto R.",
-                                //         "authors"=> "Roberto R. (Rails Developer)",
-                                //         "post"=> "Partner &amp; Contributor",
-                                //         "href"=> "https://twitter.com/@sildur",
-                                //         "twitter"=> "@sildur",
-                                //         "wrap"=> "https://wrapbootstrap.com/user/sildur",
-                                        // "email_link"=> '<i class="fal fa-envelope"></i>'
-                                //         "title"=> "Contact Roberto",
-                                //         "active"=> "disabled"
-                                //     ]
+                                    [
+                                        "img"=> "img/demo/authors/sunny.png",
+                                        "alt"=> "Sunny A.",
+                                        "authors"=> "Sunny A. (UI/UX Expert)",
+                                        "post"=> "Lead Author",
+                                        "href"=> "https://twitter.com/@myplaneticket",
+                                        "twitter"=> "@myplaneticket",
+                                        "wrap"=> "https://wrapbootstrap.com/user/myorange",
+                                        "title"=> "Contact Sunny",
+                                        "active"=> "enable"
+                                    ],
+                                    [
+                                        "img"=> "img/demo/authors/josh.png",
+                                        "alt"=> "Jos K.",
+                                        "authors"=> "Jos K. (ASP.NET Developer)",
+                                        "post"=> "Partner &amp; Contributor",
+                                        "href"=> "https://twitter.com/@atlantez",
+                                        "twitter"=> "@atlantez",
+                                        "wrap"=> "https://wrapbootstrap.com/user/Walapa",
+                                        "title"=> "Contact Jos",
+                                        "active"=> "enable"
+                                    ],
+                                    [
+                                        "img"=> "img/demo/authors/jovanni.png",
+                                        "alt"=> "Jovanni Lo",
+                                        "authors"=> "Jovanni L. (PHP Developer)",
+                                        "post"=> "Partner &amp; Contributor",
+                                        "href"=> "https://twitter.com/@lodev09",
+                                        "twitter"=> "@lodev09",
+                                        "wrap"=> "https://wrapbootstrap.com/user/lodev09",
+                                        "title"=> "Contact Jovanni",
+                                        "active"=> "disabled"
+                                    ],
+                                    [
+                                        "img"=> "img/demo/authors/roberto.png",
+                                        "alt"=> "Roberto R.",
+                                        "authors"=> "Roberto R. (Rails Developer)",
+                                        "post"=> "Partner &amp; Contributor",
+                                        "href"=> "https://twitter.com/@sildur",
+                                        "twitter"=> "@sildur",
+                                        "wrap"=> "https://wrapbootstrap.com/user/sildur",
+                                        "title"=> "Contact Roberto",
+                                        "active"=> "disabled"
+                                    ]
 
-                                // ];
+                                ];
 
-                                //без id
-                                // echo'<pre>';
-                                // print_r($users);die;
-                                // echo'</pre>';
-
+                                
+                                
                                 $pdo = new PDO("mysql:host=localhost;dbname=10taskrookie", "root", "");
 
                                 $sql = "SELECT * FROM users";
@@ -103,7 +96,6 @@
                                 $statement = $pdo-> prepare($sql);
                                 $statement->execute();
                                 $users = $statement->fetchAll(PDO::FETCH_ASSOC);
-                                // соединение с бд, будет видно id
                                 // echo'<pre>';
                                 // print_r($statement->fetchAll(PDO::FETCH_ASSOC));die;
                                 // echo'</pre>';
@@ -125,7 +117,7 @@
                                                 </small>
                                             </h5>
                                             <a href="<? echo $user["href"]; ?>" class="text-info fs-sm" target="_blank"><? echo $user["twitter"]; ?></a> -
-                                            <a href="<? echo $user["wrap"]; ?>" class="text-info fs-sm" target="_blank" title="<? echo $user["title"]; ?>"><? echo $user["email_link"]; ?></a>
+                                            <a href="<? echo $user["wrap"]; ?>" class="text-info fs-sm" target="_blank" title="<? echo $user["title"]; ?>"><i class="fal fa-envelope"></i></a>
                                         </div>
                                     </div>
                             <?php endforeach;?>
