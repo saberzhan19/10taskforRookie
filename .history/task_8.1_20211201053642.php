@@ -70,7 +70,7 @@
                                             <td>
                                                 <a href="show.php?id=<? echo $row["id"]?>" class="btn btn-info">Редактировать</a>
                                                 <a href="edit.php?id=<? echo $row["id"]?>" class="btn btn-warning">Изменить</a>
-                                                <a href="delete.php?id=<? echo $row["id"]?>" class="btn btn-danger">Удалить</a>
+                                                <a href="delete.php?id=7" class="btn btn-danger">Удалить</a>
                                             </td>
                                         </tr>
                                        

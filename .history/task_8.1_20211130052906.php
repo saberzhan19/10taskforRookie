@@ -63,14 +63,14 @@
                                         <?php foreach ($table as $row):?>
 
                                         <tr>
-                                            <th scope="row"><? echo $row["id"]?></th>
+                                            <th scope="row"><? echo $row["scope"]?></th>
                                             <td><? echo $row["name"]?></td>
                                             <td><? echo $row["surname"]?></td>
-                                            <td><? echo $row["username"]?></td>
+                                            <td><? echo $row["address"]?></td>
                                             <td>
-                                                <a href="show.php?id=<? echo $row["id"]?>" class="btn btn-info">Редактировать</a>
-                                                <a href="edit.php?id=<? echo $row["id"]?>" class="btn btn-warning">Изменить</a>
-                                                <a href="delete.php?id=<? echo $row["id"]?>" class="btn btn-danger">Удалить</a>
+                                                <a href="show.php?id=5" class="btn btn-info">Редактировать</a>
+                                                <a href="edit.php?id=" class="btn btn-warning">Изменить</a>
+                                                <a href="delete.php?id=5" class="btn btn-danger">Удалить</a>
                                             </td>
                                         </tr>
                                        
