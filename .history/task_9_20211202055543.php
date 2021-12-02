@@ -31,14 +31,27 @@
                             <button class="btn btn-panel waves-effect waves-themed" data-action="panel-fullscreen" data-toggle="tooltip" data-offset="0,10" data-original-title="Fullscreen"></button>
                         </div>
                     </div>
+
+                    <?php
+                                
+                        // $name = $_POST['name'];       
+
+                        $pdo = new PDO("mysql:host=localhost;dbname=10taskrookie" , "root", "");
+                        $sql = "INSERT INTO sendler(text) VALUES (:text)";
+                        $statement = $pdo -> prepare($sql);
+                        $statement->execute();
+                        $sendler = $statement-> fetchAll(PDO::FETCH_ASSOC);
+
+                    ?>
+
                     <div class="panel-container show">
                         <div class="panel-content">
                             <div class="panel-content">
                                 <div class="form-group">
-                                    <form action="save_9.php" method="post">
+                                    <form action="" method="post">
                                         <label class="form-label" for="simpleinput">Text</label>
-                                        <input type="text" id="simpleinput" class="form-control" name="text">
-                                        <button class="btn btn-success mt-3" type="submit">Submit</button>
+                                        <input type="text" id="simpleinput" class="form-control">
+                                        <button class="btn btn-success mt-3">Submit</button>
                                     </form>
                                 </div>
                             </div>

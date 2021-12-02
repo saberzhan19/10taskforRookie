@@ -31,6 +31,8 @@
                             <button class="btn btn-panel waves-effect waves-themed" data-action="panel-fullscreen" data-toggle="tooltip" data-offset="0,10" data-original-title="Fullscreen"></button>
                         </div>
                     </div>
+
+
                     <div class="panel-container show">
                         <div class="panel-content">
                             <div class="panel-content">
@@ -38,7 +40,7 @@
                                     <form action="save_9.php" method="post">
                                         <label class="form-label" for="simpleinput">Text</label>
                                         <input type="text" id="simpleinput" class="form-control" name="text">
-                                        <button class="btn btn-success mt-3" type="submit">Submit</button>
+                                        <button class="btn btn-success mt-3" type=>Submit</button>
                                     </form>
                                 </div>
                             </div>

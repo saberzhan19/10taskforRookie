@@ -31,14 +31,43 @@
                             <button class="btn btn-panel waves-effect waves-themed" data-action="panel-fullscreen" data-toggle="tooltip" data-offset="0,10" data-original-title="Fullscreen"></button>
                         </div>
                     </div>
+
+                    <?php
+                                
+                        $name = $_POST['name'];       
+
+                        $pdo = new PDO("mysql:host=localhost;dbname=10taskrookie" , "root", "");
+
+                        // if (!$pdo) {
+                        //     die("Connection failed: " . mysqli_connect_error());
+                        //     }
+                            
+                        //     echo "Connectedsuccessfully";
+                        
+                        $data = array('text'=> $text);
+                        $sql = "INSERT INTO sendler(text) VALUES (:text)";
+
+
+                        // if (mysqli_query($pdo, $sql)) {
+                        //     echo "New recordcreatedsuccessfully";
+                        //     } else {
+                        //           echo "Error: " . $sql . "<br>" . mysqli_error($pdo);
+                        //     }
+                        
+                        $statement = $pdo -> prepare($sql);
+                        $statement->execute($data);
+                        $sendler = $statement-> fetchAll(PDO::FETCH_ASSOC);
+
+                    ?>
+
                     <div class="panel-container show">
                         <div class="panel-content">
                             <div class="panel-content">
                                 <div class="form-group">
-                                    <form action="save_9.php" method="post">
+                                    <form action="" method="post">
                                         <label class="form-label" for="simpleinput">Text</label>
-                                        <input type="text" id="simpleinput" class="form-control" name="text">
-                                        <button class="btn btn-success mt-3" type="submit">Submit</button>
+                                        <input type="text" id="simpleinput" class="form-control">
+                                        <button class="btn btn-success mt-3">Submit</button>
                                     </form>
                                 </div>
                             </div>
