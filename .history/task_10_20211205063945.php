@@ -1,3 +1,7 @@
+<?php
+ session_start();
+
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,10 +38,17 @@
                         <div class="panel-content">
                             <div class="panel-content">
                                 <div class="form-group">
+                                    
+                                    <?php if(!empty($text)):?>
+
                                     <div class="alert alert-danger fade show" role="alert">
-                                        You should check in on some of those fields below.
+                                        
+                                        <?php echo display_flash_message['error'];?>    
                                     </div>
-                                    <form action="">
+
+                                    <? endif;?>
+
+                                    <form action="save_10.php" method="post">
                                         <label class="form-label" for="simpleinput">Text</label>
                                         <input type="text" id="simpleinput" class="form-control" name="text">
                                         <button class="btn btn-success mt-3" type="submit">Submit</button>
