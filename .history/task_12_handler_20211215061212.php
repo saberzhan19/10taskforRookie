@@ -11,9 +11,13 @@ $sql = "INSERT INTO sendler (text) VALUES (:text)";
 $statement = $pdo->prepare($sql);
 $statement->execute([ 'text' => $text  ]);
 
-$message = 'Ваше сообщение выводиться тут';
-$_SESSION ['info'] = $message; 
+// $message = 'Ваше сообщение выводиться тут';
+// $_SESSION ['info'] = $message; 
 
-header("Location: task_12.php");
+// header("Location: task_12.php");
 
+// function display_flash_message($name, $message){
+    
+//     $_SESSION[$name] = $message; 
 
+// };

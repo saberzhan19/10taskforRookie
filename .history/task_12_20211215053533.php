@@ -40,7 +40,7 @@
                                 <div class="form-group">
                                     <div class="alert alert-info fade show" role="alert">
                                         
-                                    <?php echo $_SESSION['info'];?>
+                                        <?php display_flash_message('info', '');?>                                        
                                     
                                     </div>
                                     <form action="task_12_handler.php" method="post" >

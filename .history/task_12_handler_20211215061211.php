@@ -16,4 +16,8 @@ $_SESSION ['info'] = $message;
 
 header("Location: task_12.php");
 
+// function display_flash_message($name, $message){
+    
+//     $_SESSION[$name] = $message; 
 
+// };

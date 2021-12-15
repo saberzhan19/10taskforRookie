@@ -1,7 +1,3 @@
-<?php
-    session_start();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,13 +36,11 @@
                                 <div class="form-group">
                                     <div class="alert alert-info fade show" role="alert">
                                         
-                                    <?php echo $_SESSION['info'];?>
-                                    
                                     </div>
-                                    <form action="task_12_handler.php" method="post" >
+                                    <form action="">
                                         <div class="form-group">
                                         	<label class="form-label" for="simpleinput">Text</label>
-                                            <input type="text" name="text" id="simpleinput" class="form-control" required>
+                                            <input type="text" id="simpleinput" class="form-control">
                                         </div>
                                         <button class="btn btn-success mt-3">Submit</button>
                                     </form>

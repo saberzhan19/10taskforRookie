@@ -41,7 +41,7 @@
                                     <div class="alert alert-info fade show" role="alert">
                                         
                                     <?php echo $_SESSION['info'];?>
-                                    
+
                                     </div>
                                     <form action="task_12_handler.php" method="post" >
                                         <div class="form-group">
