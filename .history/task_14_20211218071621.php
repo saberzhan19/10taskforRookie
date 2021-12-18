@@ -48,11 +48,11 @@
                                     <form action="task_14_handler.php" method="post">
                                         <div class="form-group">
                                         	<label class="form-label" for="simpleinput">Email</label>
-                                        <input type="text" name="email" id="simpleinput" class="form-control" pattern="([A_Za-z0-9_-]{3,12})@([a-z]{3,7})\.([a-z]{2,5})" required>
+                                        <input type="text" name="email" id="simpleinput" class="form-control" pattern="^] required>
                                         </div>
 
                                         <label class="form-label" for="simpleinput">Password</label>
-                                        <input type="password" name="password" id="simpleinput" class="form-control" pattern="^[A_Za-z0-9_.-]+${2,}" required>
+                                        <input type="password" name="password" id="simpleinput" class="form-control" required>
                                         <button class="btn btn-success mt-3" type="submit">Submit</button>
                                     </form>
                                 </div>
