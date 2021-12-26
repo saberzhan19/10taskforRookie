@@ -12,7 +12,7 @@ $sql = "SELECT * FROM lesson_14 WHERE email = :email";
     $statement->execute([ 'email' => $email ]);
     $task = $statement->fetch(PDO::FETCH_ASSOC);
 
-    if(empty($task)){
+    if(!empty($task)){
         $message = "Неверный логин или пароль";
         $_SESSION['danger'] = $message;
 
@@ -32,3 +32,5 @@ $sql = "SELECT * FROM lesson_14 WHERE email = :email";
         
     }
 
+
+    header("Location: task_14.php");

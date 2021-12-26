@@ -9,7 +9,9 @@ $pdo = new PDO("mysql:host=localhost;dbname=10taskrookie", "root", "");
 
 $sql = "SELECT * FROM lesson_14 WHERE email = :email";
     $statement = $pdo->prepare($sql);
-    $statement->execute([ 'email' => $email ]);
+    $statement->execute([
+        'email' => $email,
+    ]);
     $task = $statement->fetch(PDO::FETCH_ASSOC);
 
     if(empty($task)){
@@ -29,6 +31,18 @@ $sql = "SELECT * FROM lesson_14 WHERE email = :email";
         $_SESSION['success'] = $message;
         
         header("Location: task_14.php");
-        
+        exit;
     }
 
+    // $sql = "INSERT INTO lesson_14 (email, password) VALUES (:email, :password) ";
+    
+    // $statement = $pdo->prepare($sql);
+    // $statement->execute([
+    //     'email' => $email,
+    //     'password' => password_hash($password, PASSWORD_DEFAULT)
+    // ]);
+
+    // $message = "You are welcome!";
+    // $_SESSION['success'] = $message;
+
+    header("Location: task_14.php");

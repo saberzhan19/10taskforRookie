@@ -60,7 +60,7 @@
                                         </div>
 
                                         <label class="form-label" for="simpleinput">Password</label>
-                                        <input type="password" name="password" id="simpleinput" class="form-control" pattern="^[A-Za-z0-9_.-]+${2,}" required>
+                                        <input type="password" name="password" id="simpleinput" class="form-control" pattern="^[A_Za-z0-9_.-]+${2,}" required>
                                         <button class="btn btn-success mt-3" type="submit">Submit</button>
                                     </form>
                                 </div>

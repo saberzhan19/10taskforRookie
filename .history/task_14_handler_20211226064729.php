@@ -32,3 +32,5 @@ $sql = "SELECT * FROM lesson_14 WHERE email = :email";
         
     }
 
+
+    header("Location: task_14.php");

@@ -4,6 +4,7 @@ session_start();
 
 $email = $_POST['email'];
 $password = $_POST['password'];
+// $hash = password_verify($password, PASSWORD_DEFAULT);
 
 $pdo = new PDO("mysql:host=localhost;dbname=10taskrookie", "root", "");
 
@@ -32,3 +33,5 @@ $sql = "SELECT * FROM lesson_14 WHERE email = :email";
         
     }
 
+
+    header("Location: task_14.php");
