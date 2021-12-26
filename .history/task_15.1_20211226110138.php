@@ -37,18 +37,15 @@
                     <div class="panel-container show">
                         <div class="panel-content">
                             <div class="panel-content">
-                                
-                                    <?php if (isset($_SESSION['danger'])): ?>
+                                <div class="form-group">
+                                        <?php if (isset($_SESSION['danger'])): ?>
                                         <div class="alert alert-danger fade show" role="alert">
                                             <?php echo $_SESSION['danger'];
                                             unset($_SESSION['danger']);
                                             ?>
                                         </div>
                                     <?php endif; ?>
-                                   
-                                  
-                                   
-                                    <form action="task_15_handler.php" method="post">
+                                    <form action="send.php" method="post">
                                         <div class="form-group">
                                             <label class="form-label" for="simpleinput">Email</label>
                                             <input name="email" type="text" id="simpleinput" class="form-control">
@@ -58,7 +55,7 @@
                                         <input name="password" type="password" id="simpleinput" class="form-control">
                                         <button class="btn btn-success mt-3" type="submit">Submit</button>
                                     </form>
-                                
+                                </div>
                             </div>
                         </div>
                     </div>

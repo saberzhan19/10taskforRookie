@@ -46,7 +46,13 @@
                                         </div>
                                     <?php endif; ?>
                                    
-                                  
+                                    <?php if (isset($_SESSION['success'])): ?>
+                                        <div class="alert alert-success fade show" role="alert">
+                                            <?php echo $_SESSION['success'];
+                                            unset($_SESSION['success']);
+                                            ?>
+                                        </div>
+                                    <?php endif; ?>
                                    
                                     <form action="task_15_handler.php" method="post">
                                         <div class="form-group">

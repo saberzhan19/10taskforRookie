@@ -46,8 +46,13 @@
                                         </div>
                                     <?php endif; ?>
                                    
-                                  
-                                   
+                                    <?php if (isset($_SESSION['danger'])): ?>
+                                        <div class="alert alert-danger fade show" role="alert">
+                                            <?php echo $_SESSION['danger'];
+                                            unset($_SESSION['danger']);
+                                            ?>
+                                        </div>
+                                    <?php endif; ?>
                                     <form action="task_15_handler.php" method="post">
                                         <div class="form-group">
                                             <label class="form-label" for="simpleinput">Email</label>

@@ -45,9 +45,6 @@
                                             ?>
                                         </div>
                                     <?php endif; ?>
-                                   
-                                  
-                                   
                                     <form action="task_15_handler.php" method="post">
                                         <div class="form-group">
                                             <label class="form-label" for="simpleinput">Email</label>
