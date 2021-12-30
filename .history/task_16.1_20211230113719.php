@@ -74,9 +74,9 @@ $images = $_SESSION['images'];
                                 <div class="panel-content image-gallery">
                                     <div class="row">
                                       
-                                        <?php foreach($images as $image):?>
+                                        <?php foreach($images as $):?>
                                             <div class="col-md-3">
-                                                <img src="downloads/<?php echo $image; ?>">
+                                                <img src="downloads/<?php echo $; ?>">
                                             </div>                     
                                         <?php endforeach;?>
 

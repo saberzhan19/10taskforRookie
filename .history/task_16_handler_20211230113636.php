@@ -32,8 +32,8 @@ $sql = 'SELECT * FROM images';
 
 $statement = $pdo->prepare($sql);
 $statement->execute();
-$images = $statement->fetchAll(PDO::FETCH_ASSOC);
+$ = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-$_SESSION['images'] = $images;
+$_SESSION['images'] = $;
 
 header("Location: task_16.1.php");

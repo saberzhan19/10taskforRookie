@@ -1,6 +1,6 @@
 <?php 
 session_start();
-$images = $_SESSION['images'];
+$i = $_SESSION['images'];
 
 ?>
 
@@ -74,9 +74,9 @@ $images = $_SESSION['images'];
                                 <div class="panel-content image-gallery">
                                     <div class="row">
                                       
-                                        <?php foreach($images as $image):?>
+                                        <?php foreach($pictures as $picture):?>
                                             <div class="col-md-3">
-                                                <img src="downloads/<?php echo $image; ?>">
+                                                <img src="downloads/<?php echo $picture; ?>">
                                             </div>                     
                                         <?php endforeach;?>
 
