@@ -76,7 +76,7 @@ $pictures = $_SESSION['images'];
                                       
                                         <?php foreach ($pictures as $picture):?>
                                             <div class="col-md-3 image">
-                                                <img src="downloads/<?php echo $picture['picture']; ?>" width="200" height="200">
+                                                <img src="downloads/<?php echo $picture[]; ?>">
                                             </div>                     
                                         <?php endforeach;?>
 

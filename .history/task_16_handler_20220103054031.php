@@ -18,10 +18,10 @@ function download_image($calling_file, $tmp_name){
 
     $pdo = new PDO("mysql:host=localhost;dbname=10taskrookie;" , "root" , "");
 
-    $sql = "INSERT INTO images(picture) VALUES (:picture)";
+    $sql = "INSERT INTO images(image) VALUES (:image)";
     
     $statement = $pdo->prepare($sql);
-    $statement->execute(['picture' => $calling_file]);
+    $statement->execute(['image' => $calling_file]);
 
     move_uploaded_file($tmp_name, 'downloads/' . $calling_file);
 

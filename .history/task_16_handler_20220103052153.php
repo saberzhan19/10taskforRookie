@@ -8,22 +8,22 @@ for ($i=0; $i < count($_FILES['paper']['name']); $i++) {
 }
 
 
-function download_image($calling_file, $tmp_name){
-    $decision = pathinfo($calling_file) ;
+function download_image($filename, $tmp_name){
+    $decision = pathinfo($filename) ;
 
 
-    $calling_file = uniqid() . "." . $decision['extension'];
+    $filename = uniqid() . "." . $decision['extension'];
 
-    move_uploaded_file($tmp_name, 'downloads/' . $calling_file);
+    move_uploaded_file($tmp_name, 'downloads/' . $filename);
 
     $pdo = new PDO("mysql:host=localhost;dbname=10taskrookie;" , "root" , "");
 
-    $sql = "INSERT INTO images(picture) VALUES (:picture)";
+    $sql = "INSERT INTO images(image) VALUES (:image)";
     
     $statement = $pdo->prepare($sql);
-    $statement->execute(['picture' => $calling_file]);
+    $statement->execute(['image' => $filename]);
 
-    move_uploaded_file($tmp_name, 'downloads/' . $calling_file);
+    move_uploaded_file($tmp_name, 'downloads/' . $filename);
 
 }
 

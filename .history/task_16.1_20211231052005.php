@@ -45,7 +45,7 @@ $pictures = $_SESSION['images'];
                                         <form action="task_16_handler.php" enctype="multipart/form-data" method="post">
                                             <div class="form-group">
                                                 <label class="form-label" for="simpleinput">Image</label>
-                                            <input type="file" name="paper[]" id="simpleinput" class="form-control" multiple>
+                                            <input type="file" name="image[]" id="simpleinput" class="form-control" multiple>
                                             </div>
                                             <button class="btn btn-success mt-3" type="Submit">Submit</button>
                                         </form>
@@ -74,9 +74,9 @@ $pictures = $_SESSION['images'];
                                 <div class="panel-content image-gallery">
                                     <div class="row">
                                       
-                                        <?php foreach ($pictures as $picture):?>
-                                            <div class="col-md-3 image">
-                                                <img src="downloads/<?php echo $picture['picture']; ?>" width="200" height="200">
+                                        <?php foreach($pictures as $pi):?>
+                                            <div class="col-md-3">
+                                                <img src="downloads/<?php echo $pi; ?>">
                                             </div>                     
                                         <?php endforeach;?>
 
