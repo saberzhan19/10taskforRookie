@@ -10,4 +10,6 @@
 8. <a href="https://github.com/saberzhan19/10taskforRookie/tree/task-8"> Task-8</a>
 9. <a href="https://github.com/saberzhan19/10taskforRookie/tree/task-9"> Task-9</a>
 10. <a href="https://github.com/saberzhan19/10taskforRookie/tree/task-10"> Task-10</a>
+11. <a href="https://github.com/saberzhan19/10taskforRookie/tree/task-11"> Task-11</a>
+12. <a href="https://github.com/saberzhan19/10taskforRookie/tree/task-12"> Task-12</a>
 
