@@ -27,6 +27,10 @@ function download_image($calling_file, $tmp_name){
 
 }
 
+function delete() {
+
+    
+}
 
 $pdo = new PDO("mysql:host=localhost;dbname=10taskrookie" , "root" , "");
 

@@ -50,10 +50,10 @@
                                 <div class="panel-content">
                                     <div class="form-group">
 
-                                        <form action="task_17_handler.php" enctype="multipart/form-data" method="post">
+                                        <form action="task_17_handler.php" method="post">
                                             <div class="form-group">
                                                 <label class="form-label" for="simpleinput">Image</label>
-                                                <input type="file" name="file[]" id="simpleinput" class="form-control" multiple>
+                                                <input type="file" name="file[]" id="simpleinput" class="form-control">
                                             </div>
                                             <button class="btn btn-success mt-3" type="submit">Submit</button>
                                         </form>
@@ -83,8 +83,8 @@
                                         
                                         <?php foreach($pictures as $picture):?>
                                         <div class="col-md-3 image">
-                                            <img src="pictures/<?php echo $picture['decoration'];?>"  >
-                                            <a class="btn btn-danger delete-file" href="task_17_delete.php?id=<?php echo $picture['id'];?>" onclick="confirm('Вы уверены?');">Удалить</a>
+                                            <img src="pictures/<?php echo $picture;?>"  >
+                                            <a class="btn btn-danger" href="#" onclick="confirm('Вы уверены?');">Удалить</a>
                                         </div>
                                         <?php endforeach;?>
 

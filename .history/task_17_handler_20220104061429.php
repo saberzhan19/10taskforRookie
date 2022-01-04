@@ -18,15 +18,14 @@ function download_image($calling_file, $tmp_name){
 
     $pdo = new PDO("mysql:host=localhost;dbname=10taskrookie;" , "root" , "");
 
-    $sql = "INSERT INTO images(decoration) VALUES (:decoration)";
+    $sql = "INSERT INTO images(picture) VALUES (:picture)";
     
     $statement = $pdo->prepare($sql);
-    $statement->execute(['decoration' => $calling_file]);
+    $statement->execute(['picture' => $calling_file]);
 
     move_uploaded_file($tmp_name, 'pictures/' . $calling_file);
 
 }
-
 
 $pdo = new PDO("mysql:host=localhost;dbname=10taskrookie" , "root" , "");
 
@@ -39,5 +38,3 @@ $pictures = $statement->fetchAll(PDO::FETCH_ASSOC);
 $_SESSION['images'] = $pictures;
 
 header("Location: task_17.1.php");
-
-

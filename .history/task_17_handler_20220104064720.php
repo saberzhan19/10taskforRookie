@@ -27,6 +27,17 @@ function download_image($calling_file, $tmp_name){
 
 }
 
+function delete($delete) {
+
+    $pdo = new PDO("mysql:host=localhost;dbname=10taskrookie" , "root" , "");
+    
+    $sql = 'DELETE FROM images WHERE id = :id';
+    
+    $statement = $pdo->prepare($sql);
+    $statement->execute('delete'=);
+    
+    header("Location: task_17.1.php");
+}
 
 $pdo = new PDO("mysql:host=localhost;dbname=10taskrookie" , "root" , "");
 

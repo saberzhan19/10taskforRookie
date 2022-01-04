@@ -84,7 +84,7 @@
                                         <?php foreach($pictures as $picture):?>
                                         <div class="col-md-3 image">
                                             <img src="pictures/<?php echo $picture['decoration'];?>"  >
-                                            <a class="btn btn-danger delete-file" href="task_17_delete.php?id=<?php echo $picture['id'];?>" onclick="confirm('Вы уверены?');">Удалить</a>
+                                            <a class="btn btn-danger" href="id=<?php echo $delete['delete'];?>" onclick="confirm('Вы уверены?');">Удалить</a>
                                         </div>
                                         <?php endforeach;?>
 

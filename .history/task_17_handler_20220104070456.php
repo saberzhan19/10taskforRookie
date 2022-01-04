@@ -28,6 +28,7 @@ function download_image($calling_file, $tmp_name){
 }
 
 
+
 $pdo = new PDO("mysql:host=localhost;dbname=10taskrookie" , "root" , "");
 
 $sql = 'SELECT * FROM images';

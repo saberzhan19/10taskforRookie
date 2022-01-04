@@ -27,7 +27,6 @@ function download_image($calling_file, $tmp_name){
 
 }
 
-
 $pdo = new PDO("mysql:host=localhost;dbname=10taskrookie" , "root" , "");
 
 $sql = 'SELECT * FROM images';
@@ -39,5 +38,3 @@ $pictures = $statement->fetchAll(PDO::FETCH_ASSOC);
 $_SESSION['images'] = $pictures;
 
 header("Location: task_17.1.php");
-
-

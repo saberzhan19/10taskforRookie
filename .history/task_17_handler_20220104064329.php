@@ -40,4 +40,3 @@ $_SESSION['images'] = $pictures;
 
 header("Location: task_17.1.php");
 
-

@@ -3,8 +3,8 @@
 session_start();
 
 
-for ($i=0; $i < count($_FILES['file']['name']); $i++) {
-    download_image($_FILES['file']['name'][$i], $_FILES['file']['tmp_name'][$i]);
+for ($i=0; $i < count($_FILES['paper']['name']); $i++) {
+    download_image($_FILES['paper']['name'][$i], $_FILES['paper']['tmp_name'][$i]);
 }
 
 
@@ -14,19 +14,18 @@ function download_image($calling_file, $tmp_name){
 
     $calling_file = uniqid() . "." . $decision['extension'];
 
-    move_uploaded_file($tmp_name, 'pictures/' . $calling_file);
+    move_uploaded_file($tmp_name, 'downloads/' . $calling_file);
 
     $pdo = new PDO("mysql:host=localhost;dbname=10taskrookie;" , "root" , "");
 
-    $sql = "INSERT INTO images(decoration) VALUES (:decoration)";
+    $sql = "INSERT INTO images(picture) VALUES (:picture)";
     
     $statement = $pdo->prepare($sql);
-    $statement->execute(['decoration' => $calling_file]);
+    $statement->execute(['picture' => $calling_file]);
 
-    move_uploaded_file($tmp_name, 'pictures/' . $calling_file);
+    move_uploaded_file($tmp_name, 'downloads/' . $calling_file);
 
 }
-
 
 $pdo = new PDO("mysql:host=localhost;dbname=10taskrookie" , "root" , "");
 
@@ -38,6 +37,4 @@ $pictures = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 $_SESSION['images'] = $pictures;
 
-header("Location: task_17.1.php");
-
-
+header("Location: task_16.1.php");

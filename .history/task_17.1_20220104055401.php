@@ -1,10 +1,3 @@
-<?php
-
-    session_start();
-    $pictures = $_SESSION['images'];
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,10 +17,7 @@
         <link rel="stylesheet" media="screen, print" href="css/fa-brands.css">
         <link rel="stylesheet" media="screen, print" href="css/fa-regular.css">
         <style>
-            img {
-                width: 250px;
-                height: 250px;
-            }
+            img{}
         </style>
     </head>
     
@@ -49,15 +39,13 @@
                             <div class="panel-content">
                                 <div class="panel-content">
                                     <div class="form-group">
-
-                                        <form action="task_17_handler.php" enctype="multipart/form-data" method="post">
+                                        <form action="task_17_handler.php" method="post">
                                             <div class="form-group">
                                                 <label class="form-label" for="simpleinput">Image</label>
-                                                <input type="file" name="file[]" id="simpleinput" class="form-control" multiple>
+                                            <input type="file" name="file" id="simpleinput" class="form-control">
                                             </div>
                                             <button class="btn btn-success mt-3" type="submit">Submit</button>
                                         </form>
-
                                     </div>
                                 </div>
                             </div>
@@ -80,14 +68,18 @@
                             <div class="panel-content">
                                 <div class="panel-content image-gallery">
                                     <div class="row">
-                                        
-                                        <?php foreach($pictures as $picture):?>
                                         <div class="col-md-3 image">
-                                            <img src="pictures/<?php echo $picture['decoration'];?>"  >
-                                            <a class="btn btn-danger delete-file" href="task_17_delete.php?id=<?php echo $picture['id'];?>" onclick="confirm('Вы уверены?');">Удалить</a>
+                                            <img src="img/demo/gallery/1.jpg"  width="200" height="200">
+                                            <a class="btn btn-danger" href="#" onclick="confirm('Вы уверены?');">Удалить</a>
                                         </div>
-                                        <?php endforeach;?>
-
+                                        <div class="col-md-3">
+                                            <img src="img/demo/gallery/2.jpg"  width="200" height="200">
+                                            <a class="btn btn-danger" onclick="confirm('Вы уверены?');" href="#">Удалить</a>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <img src="img/demo/gallery/3.jpg"  width="200" height="200">
+                                            <a class="btn btn-danger" onclick="confirm('Вы уверены?');" href="#">Удалить</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
