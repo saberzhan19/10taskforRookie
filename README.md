@@ -16,5 +16,5 @@
 14. <a href="https://github.com/saberzhan19/10taskforRookie/tree/task-14"> Task-14</a>
 15. <a href="https://github.com/saberzhan19/10taskforRookie/tree/task-15"> Task-15</a>
 16. <a href="https://github.com/saberzhan19/10taskforRookie/tree/task-16"> Task-16</a>
-17. <a href="https://github.com/saberzhan19/10taskforRookie/tree/task-17"> Task-17 (added & delete files from mysql base & file)</a>
+17. <a href="https://github.com/saberzhan19/10taskforRookie/tree/task-17"> Task-17</a>(added & delete files from mysql base & file)
 
