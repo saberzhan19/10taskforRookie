@@ -84,10 +84,10 @@
                                         <?php foreach($pictures as $picture):?>
                                         <div class="col-md-3 image">
                                             <img src="pictures/<?php echo $picture['decoration'];?>"  >
-                                            <a class="btn btn-danger" href="task_17_delete.php?id=<?php echo $picture['id'];?>&name=<?php echo $picture['decoration']; ?>" onclick="return confirm('Вы уверены?');">Удалить</a>
+                                            <a class="btn btn-danger delete-file" href="task_17_delete.php?id=<?php echo $picture['id'];?>" onclick="confirm('Вы уверены?');">Удалить</a>
                                         </div>
                                         <?php endforeach;?>
-
+3. <a href="https://github.com/saberzhan19/10taskforRookie/tree/task-4"> Task-4</a>
                                     </div>
                                 </div>
                             </div>
