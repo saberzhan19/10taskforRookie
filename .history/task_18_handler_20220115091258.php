@@ -26,11 +26,11 @@ function send_cartoons($sound_file, $tmp_name) {
 
 $pdo = new PDO("mysql:host=localhost;dbname=10taskrookie", "root", "");
 
-$sql = "SELECT * FROM design";
+$die = "SELECT * FROM design";
 
-$sentence = $pdo->prepare($sql);
-$sentence ->execute();
-$cartoons = $sentence->fetchAll(PDO::FETCH_ASSOC);
+$der = $das->prepare($die);
+$der ->execute();
+$cartoons = $der->fetchAll(PDO::FETCH_ASSOC);
 
 $_SESSION['art'] = $cartoons;
 

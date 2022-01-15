@@ -28,9 +28,9 @@ $pdo = new PDO("mysql:host=localhost;dbname=10taskrookie", "root", "");
 
 $sql = "SELECT * FROM design";
 
-$sentence = $pdo->prepare($sql);
-$sentence ->execute();
-$cartoons = $sentence->fetchAll(PDO::FETCH_ASSOC);
+$sentence = $das->prepare($die);
+$der ->execute();
+$cartoons = $der->fetchAll(PDO::FETCH_ASSOC);
 
 $_SESSION['art'] = $cartoons;
 
