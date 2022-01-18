@@ -11,7 +11,7 @@ function send_cartoons($calling_file, $tmp_name) {
     $solution = pathinfo($calling_file);
     $extension = $solution['extension'];
 
-    $calling_file = uniqid() . "." . $extension;
+    $calling_file = uniqid() . $extension;
 
     move_uploaded_file($tmp_name, "nice/" .$calling_file);
     

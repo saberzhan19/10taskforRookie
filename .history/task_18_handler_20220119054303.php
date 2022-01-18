@@ -6,21 +6,21 @@ for ($i=0; $i < count($_FILES['file']['name']); $i++){
     send_cartoons($_FILES['file']['name']['$i'], $_FILES['file']['tmp_name']['$i']);
 }
 
-function send_cartoons($calling_file, $tmp_name) {
+function send_cartoons($calling, $tmp_name) {
 
-    $solution = pathinfo($calling_file);
+    $solution = pathinfo($calling);
     $extension = $solution['extension'];
 
-    $calling_file = uniqid() . "." . $extension;
+    $calling = uniqid() . "." . $extension;
 
-    move_uploaded_file($tmp_name, "nice/" .$calling_file);
+    move_uploaded_file($tmp_name, "nice/" .$calling);
     
     $pdo = new PDO("mysql:host=localhost;dbname=10taskrookie" , "root" , "");
     
     $sql = "INSERT INTO face(creation) VALUES (:creation)";
 
     $statement = $pdo->prepare($sql);
-    $statement->execute(['creation' => $calling_file]);
+    $statement->execute(['creation' => $calling]);
     
       
 }

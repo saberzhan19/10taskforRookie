@@ -55,7 +55,6 @@
                                             <input type="file" name="file[]" id="simpleinput" class="form-control" multiple>
                                             </div>
                                             <button class="btn btn-success mt-3" type="submit">Submit</button>
-                                
                                         </form>
 
                                     </div>
@@ -85,6 +84,7 @@
                                         <div class="col-md-3 image">
                                             <img src="nice/<?php echo $cartoon['creation']; ?> ">
                                             <a class="btn btn-danger" href="task_18_delete.php?id=<?php echo $cartoon['id']; ?>&name=<?php echo $cartoon['creation'];?>" onclick="return confirm('Are you sure you want to delete this?');">Delete</a>
+                                            
                                         </div>
                                     <?php endforeach;?>    
 
