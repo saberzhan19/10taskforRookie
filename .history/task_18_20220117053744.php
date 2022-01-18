@@ -1,7 +1,7 @@
 <?php
     session_start();
 
-    $cartoons = $_SESSION["creation"];
+    
 
 ?>
 
@@ -79,10 +79,10 @@
                             <div class="panel-content">
                                 <div class="panel-content image-gallery">
                                     <div class="row">
-                                    
+                                    <?php
                                     <?php foreach ($cartoons as $cartoon):?>
                                         <div class="col-md-3 image">
-                                            <img src="nice/<?php echo $cartoon['creation']; ?> ">
+                                            <img src="look/ <?php echo $cartoon['creation']; ?> ">
                                             <a class="btn btn-danger" href="task_18_delete.php?id=<?php echo $cartoon['id']; ?>&name=<?php echo $cartoon['creation'];?>" onclick="return confirm('Are you sure you want to delete this?');">Delete</a>
                                         </div>
                                     <?php endforeach;?>    

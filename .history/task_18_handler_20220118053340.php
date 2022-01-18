@@ -9,11 +9,11 @@ for ($i=0; $i < count($_FILES['file']['name']); $i++){
 function send_cartoons($sound_file, $tmp_name) {
 
     $solution = pathinfo($sound_file);
-    $extension = $solution['extension'];
+    
 
-    $sound_file = uniqid() . "." .$extension;
+    $sound_file = uniqid() . "." .$solution['extension'];
 
-    move_uploaded_file($tmp_name, 'nice/' .$sound_file);
+    move_uploaded_file($tmp_name, 'nice/' . $sound_file);
     
     $pdo = new PDO("mysql:host=localhost;dbname=10taskrookie" , "root" , "");
     

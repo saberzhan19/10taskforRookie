@@ -13,7 +13,7 @@ function send_cartoons($sound_file, $tmp_name) {
 
     $sound_file = uniqid() . "." .$extension;
 
-    move_uploaded_file($tmp_name, 'nice/' .$sound_file);
+    move_uploaded_file($tmp_name, '/nice/' .$sound_file);
     
     $pdo = new PDO("mysql:host=localhost;dbname=10taskrookie" , "root" , "");
     

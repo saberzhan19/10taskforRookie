@@ -6,34 +6,35 @@ for ($i=0; $i < count($_FILES['file']['name']); $i++){
     send_cartoons($_FILES['file']['name']['$i'], $_FILES['file']['tmp_name']['$i']);
 }
 
-function send_cartoons($sound_file, $tmp_name) {
+function send_cartoons($, $t_name) {
 
-    $solution = pathinfo($sound_file);
-    $extension = $solution['extension'];
+    $solution = pathinfo($);
 
-    $sound_file = uniqid() . "." .$extension;
+    $ = uniqid() . "." .$solution['extension'];
 
-    move_uploaded_file($tmp_name, 'nice/' .$sound_file);
-    
+    move_uploaded_file($t_name, '/look/' . $);
+
     $pdo = new PDO("mysql:host=localhost;dbname=10taskrookie" , "root" , "");
-    
-    $sql = "INSERT INTO face(creation) VALUES (:creation)";
+
+    $sql = "INSERT INTO design(creation) VALUES (:creation)";
 
     $sentence = $pdo->prepare($sql);
-    $sentence->execute(['creation' => $sound_file]);
+    $sentence->execute(['creation' => $]);
     
       
 }
 
 $pdo = new PDO("mysql:host=localhost;dbname=10taskrookie", "root", "");
 
-$sql = "SELECT * FROM face";
+$sql = "SELECT * FROM design";
 
 $sentence = $pdo->prepare($sql);
 $sentence->execute();
 $cartoons = $sentence->fetchAll(PDO::FETCH_ASSOC);
 
-$_SESSION['creation'] = $cartoons;
+$_SESSION['art'] = $cartoons;
 
 header("Location: task_18.php");
+
+
 

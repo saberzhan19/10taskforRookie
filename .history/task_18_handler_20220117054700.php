@@ -8,20 +8,19 @@ for ($i=0; $i < count($_FILES['file']['name']); $i++){
 
 function send_cartoons($sound_file, $tmp_name) {
 
-    $solution = pathinfo($sound_file);
-    $extension = $solution['extension'];
+    $solution = pathinfo($sound_);
 
-    $sound_file = uniqid() . "." .$extension;
+    $sound_ = uniqid() . "." .$solution['extension'];
 
-    move_uploaded_file($tmp_name, 'nice/' .$sound_file);
     
     $pdo = new PDO("mysql:host=localhost;dbname=10taskrookie" , "root" , "");
     
     $sql = "INSERT INTO face(creation) VALUES (:creation)";
 
     $sentence = $pdo->prepare($sql);
-    $sentence->execute(['creation' => $sound_file]);
+    $sentence->execute(['creation' => $sound_]);
     
+    move_uploaded_file($tmp, 'look/' . $sound_);
       
 }
 
@@ -33,7 +32,7 @@ $sentence = $pdo->prepare($sql);
 $sentence->execute();
 $cartoons = $sentence->fetchAll(PDO::FETCH_ASSOC);
 
-$_SESSION['creation'] = $cartoons;
+$_SESSION['face'] = $cartoons;
 
 header("Location: task_18.php");
 
