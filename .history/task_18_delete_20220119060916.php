@@ -4,10 +4,11 @@ session_start();
 
 $id=$_GET["id"];
 $name=$_GET["name"];
+unlink("nice/" . $name);
 
-if(file_exists("nice/" . $name)){
-    unlink("nice/" . $name);
-} 
+// if(file_exists("nice/" . $name)){
+//     unlink("nice/" . $name);
+// } 
 
 $pdo = new PDO("mysql:host=localhost;dbname=10taskrookie" , "root" , "");
 
@@ -21,6 +22,6 @@ $statement = $pdo->prepare($sql);
 $statement->execute();
 $cartoons = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-$_SESSION['face'] = $cartoons;
+$_SESSION['creation'] = $cartoons;
 
 header("Location: task_18.php");

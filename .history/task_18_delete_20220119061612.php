@@ -5,9 +5,9 @@ session_start();
 $id=$_GET["id"];
 $name=$_GET["name"];
 
-if(file_exists("nice/" . $name)){
-    unlink("nice/" . $name);
-} 
+// if(file_exists("nice/" . $name)){
+//     unlink("nice/" . $name);
+// } 
 
 $pdo = new PDO("mysql:host=localhost;dbname=10taskrookie" , "root" , "");
 

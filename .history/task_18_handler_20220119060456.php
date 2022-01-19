@@ -32,7 +32,7 @@ $statement = $pdo->prepare($sql);
 $statement->execute();
 $cartoons = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-$_SESSION['face'] = $cartoons;
+$_SESSION['creation'] = $cartoons;
 
 header("Location: task_18.php");
 

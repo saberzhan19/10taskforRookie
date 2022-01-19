@@ -8,9 +8,9 @@ for ($i=0; $i < count($_FILES['file']['name']); $i++){
 
 function download_image($calling_file, $tmp_name) {
 
-    $decision = pathinfo($calling_file);
+    $desi = pathinfo($calling_file);
 
-    $calling_file = uniqid() . "." . $decision['extension'];
+    $calling_file = uniqid() . "." . $desi['extension'];
 
     move_uploaded_file($tmp_name, "nice/" . $calling_file);
     
@@ -32,7 +32,7 @@ $statement = $pdo->prepare($sql);
 $statement->execute();
 $cartoons = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-$_SESSION['face'] = $cartoons;
+$_SESSION['creation'] = $cartoons;
 
 header("Location: task_18.php");
 

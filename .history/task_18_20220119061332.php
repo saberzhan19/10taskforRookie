@@ -55,7 +55,7 @@
                                             <input type="file" name="file[]" id="simpleinput" class="form-control" multiple>
                                             </div>
                                             <button class="btn btn-success mt-3" type="submit">Submit</button>
-                                            <a class="btn btn-primary mt-3" href="/">To main</a>
+                                            <a class="btn btn-primary mt-3" href="/">Back to main</a>
                                         </form>
 
                                     </div>
