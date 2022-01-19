@@ -14,8 +14,9 @@ function download_image($calling_file, $tmp_name){
 
     $calling_file = uniqid() . "." . $decision['extension'];
 
-    move_uploaded_file($tmp_name, 'pictures/' . $calling_file);    
-             
+    
+    
+    move_uploaded_file($tmp_name, 'pictures/' . $calling_file);
 
     
     $pdo = new PDO("mysql:host=localhost;dbname=10taskrookie;" , "root" , "");

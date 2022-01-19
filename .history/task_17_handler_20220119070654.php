@@ -14,8 +14,7 @@ function download_image($calling_file, $tmp_name){
 
     $calling_file = uniqid() . "." . $decision['extension'];
 
-    move_uploaded_file($tmp_name, 'pictures/' . $calling_file);    
-             
+    $move = move_uploaded_file($tmp_name, 'pictures/' . $calling_file);
 
     
     $pdo = new PDO("mysql:host=localhost;dbname=10taskrookie;" , "root" , "");
@@ -29,7 +28,12 @@ function download_image($calling_file, $tmp_name){
 
 }
 
-
+if( 0 < $_FILES['file']['error']) {
+    echo 'Error: ' . $_FILES['file']['error'] . <br>;
+}
+else{
+    if(is_file(_DIR_.'/' . $_FILES['file']['name']))
+}
 
 
 $pdo = new PDO("mysql:host=localhost;dbname=10taskrookie" , "root" , "");

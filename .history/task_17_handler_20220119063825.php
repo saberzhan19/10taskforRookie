@@ -14,10 +14,10 @@ function download_image($calling_file, $tmp_name){
 
     $calling_file = uniqid() . "." . $decision['extension'];
 
-    move_uploaded_file($tmp_name, 'pictures/' . $calling_file);    
-             
+    $move = move_uploaded_file($tmp_name, 'pictures/' . $calling_file);
 
-    
+    if($move)= true; ? "success" : "error";
+
     $pdo = new PDO("mysql:host=localhost;dbname=10taskrookie;" , "root" , "");
 
     $sql = "INSERT INTO images(decoration) VALUES (:decoration)";
@@ -28,8 +28,6 @@ function download_image($calling_file, $tmp_name){
     move_uploaded_file($tmp_name, 'pictures/' . $calling_file);
 
 }
-
-
 
 
 $pdo = new PDO("mysql:host=localhost;dbname=10taskrookie" , "root" , "");
