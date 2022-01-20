@@ -52,7 +52,7 @@
                                         <form action="task_18_handler.php" enctype="multipart/form-data" method="post">
                                             <div class="form-group">
                                                 <label class="form-label" for="simpleinput">Image</label>
-                                            <input type="file" name="files[]" id="simpleinput" class="form-control" multiple required>
+                                            <input type="file" name="file[]" id="simpleinput" class="form-control" multiple >
                                             </div>
                                             <button class="btn btn-success mt-3" type="submit">Submit</button>
                                             <a class="btn btn-primary mt-3" href="/">To main</a>

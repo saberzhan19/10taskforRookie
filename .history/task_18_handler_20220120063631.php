@@ -14,7 +14,7 @@ function received_art($sender, $tmp){
 
     $sender = uniqid() . "." . $ext;
 
-    move_uploaded_file($tmp, 'nice/' . $sender);
+    move_uploaded_file($tmp, 'nice/' . $st);
 
 
     $pdo = new PDO("mysql:host=localhost;dbname=10taskrookie", "root", "");

@@ -3,7 +3,7 @@
 session_start();
 
 for ($i = 0; $i < count($_FILES['files']['name']); $i++){
-    received_art($_FILES['files']['name'][$i], $_FILES['files']['tmp_name'][$i]);
+    received_art($_FILES['files']['name'][$i], $_FILES['files']['tmpname'][$i]);
 }
 
 function received_art($sender, $tmp){
@@ -14,7 +14,7 @@ function received_art($sender, $tmp){
 
     $sender = uniqid() . "." . $ext;
 
-    move_uploaded_file($tmp, 'nice/' . $sender);
+    move_uploaded_file($tmp, 'nice/' . $ext);
 
 
     $pdo = new PDO("mysql:host=localhost;dbname=10taskrookie", "root", "");
