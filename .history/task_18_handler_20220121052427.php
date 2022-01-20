@@ -20,8 +20,8 @@ function received_art($sender, $tmp){
     $host = new PDO("mysql:host=localhost;dbname=10taskrookie", "root", "");
 
     $bd = "INSERT INTO face (creation) VALUES (:creation)";
-    $express = $host->prepare($bd);
-    $express->execute(['creation' => $sender]);
+    $statement = $host->prepare($bd);
+    $statement->execute(['creation' => $sender]);
 
 }
 
@@ -29,9 +29,9 @@ $host = new PDO("mysql:host=localhost;dbname=10taskrookie", "root", "");
 
 $bd = "SELECT * FROM face";
 
-$express = $host->prepare($bd);
-$express->execute();
-$cartoons = $express->fetchAll(PDO::FETCH_ASSOC);
+$statement = $host->prepare($bd);
+$statement->execute();
+$cartoons = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 $_SESSION['face'] = $cartoons;
 
